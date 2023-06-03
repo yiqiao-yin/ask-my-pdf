@@ -1,10 +1,14 @@
-# Ask my PDF
+# Document Query
 
 Thank you for your interest in my application. Please be aware that this is only a **Proof of Concept system** and may contain bugs or unfinished features. 
 
 Disclaimer: I gave full credits to [mobarski](https://github.com/mobarski/ask-my-pdf). He was the one created the initial repository. I just cloned his repo and ran the code. 
 
-### Ask my PDF - Question answering system built on top of GPT3
+### Deployment
+
+I deployed my version of the app [here](https://yy-docquery.streamlit.app/).
+
+### Document Query - Question answering system built on top of GPT3
 
 🎲 The primary use case for this app is to assist users in answering  questions about board game rules based on the instruction manual. While  the app can be used for other tasks, helping users with board game rules is particularly meaningful to me since I'm an avid fan of board games  myself. Additionally, this use case is relatively harmless, even in  cases where the model may experience hallucinations.
 
@@ -28,7 +32,7 @@ Disclaimer: I gave full credits to [mobarski](https://github.com/mobarski/ask-my
 3. Run the app:
 
    `cd ask-my-pdf/src`
-   
+
    `run.sh` or `run.bat`
 
 ### High-level documentation
@@ -55,7 +59,6 @@ Disclaimer: I gave full credits to [mobarski](https://github.com/mobarski/ask-my
 
 - **CACHE_MODE** - embeddings cache mode: S3, DISK, NONE (default)
 
-
 ##### Local filesystem configuration (storage / cache):
 
 - **STORAGE_PATH** - directory path for index storage
@@ -81,13 +84,9 @@ Disclaimer: I gave full credits to [mobarski](https://github.com/mobarski/ask-my
 
 - **S3_CACHE_PREFIX** - object name prefix (cache)
 
-  
-
 ##### Redis configuration (for persistent usage statistics / user feedback):
 
 - **REDIS_URL** - Redis DB URL (redis[s]://:password@host:port/[db])
-
-  
 
 ##### Community version related options:
 
