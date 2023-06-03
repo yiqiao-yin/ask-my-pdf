@@ -1,5 +1,7 @@
 # Document Query
 
+![main](https://github.com/yiqiao-yin/wyn-docquery/blob/main/docs/main-anime.gif)
+
 Thank you for your interest in my application. Please be aware that this is only a **Proof of Concept system** and may contain bugs or unfinished features. 
 
 Disclaimer: I gave full credits to [mobarski](https://github.com/mobarski/ask-my-pdf). He was the one created the initial repository. I just cloned his repo and ran the code. 
