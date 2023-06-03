@@ -66,7 +66,7 @@ def ui_info():
 	Question answering system built on top of GPT3.
 	""")
 	ui_spacer(1)
-	st.write("Made by [Maciej Obarski](https://www.linkedin.com/in/mobarski/).", unsafe_allow_html=True)
+	st.write("Credit to [Maciej Obarski](https://www.linkedin.com/in/mobarski/) | Recreated by [Yiqiao Yin](https://www.linkedin.com/in/yiqiaoyin/)", unsafe_allow_html=True)
 	ui_spacer(1)
 	st.markdown("""
 		Thank you for your interest in my application.
