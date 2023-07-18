@@ -78,9 +78,7 @@ def ui_info():
     ui_spacer(1)
     st.write(
         """
-        ✅ Recreated by [Yiqiao Yin](https://www.linkedin.com/in/yiqiaoyin/)
-        
-        © Credit to [Maciej Obarski](https://www.linkedin.com/in/mobarski/)
+        ✅ Recreated by [Yiqiao Yin](https://www.linkedin.com/in/yiqiaoyin/) | Credit to [Maciej Obarski](https://www.linkedin.com/in/mobarski/)
         """,
         unsafe_allow_html=True,
     )
