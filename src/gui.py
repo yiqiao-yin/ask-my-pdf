@@ -77,11 +77,11 @@ def ui_info():
     )
     ui_spacer(1)
     st.write(
-        "Credit to [Maciej Obarski](https://www.linkedin.com/in/mobarski/)",
-        unsafe_allow_html=True,
-    )
-    st.write(
-        "Recreated by [Yiqiao Yin](https://www.linkedin.com/in/yiqiaoyin/)",
+        """
+        ✅ Recreated by [Yiqiao Yin](https://www.linkedin.com/in/yiqiaoyin/)
+        
+        © Credit to [Maciej Obarski](https://www.linkedin.com/in/mobarski/)
+        """,
         unsafe_allow_html=True,
     )
     ui_spacer(1)
@@ -169,7 +169,7 @@ def debug_index():
 
 
 def ui_pdf_file():
-    st.write("## 2. Upload or select your PDF file")
+    st.write("## Upload or select your PDF file")
     disabled = not ss.get("user") or (
         not ss.get("api_key") and not ss.get("community_pct", 0)
     )
@@ -278,7 +278,7 @@ def ui_hyde_prompt():
 
 def ui_question():
     st.write(
-        "## 3. Ask questions" + (f' to {ss["filename"]}' if ss.get("filename") else "")
+        "## Ask questions" + (f' to {ss["filename"]}' if ss.get("filename") else "")
     )
     disabled = False
     st.text_area(
