@@ -177,7 +177,7 @@ def ui_pdf_file():
             "pdf file",
             type="pdf",
             key="pdf_file",
-            # disabled=disabled,
+            disabled=False,
             on_change=index_pdf_file,
             label_visibility="collapsed",
         )
