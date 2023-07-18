@@ -116,7 +116,7 @@ def ui_api_key():
             ss["community_pct"] = pct
             ss["debug"]["community_pct"] = pct
         with t2:
-            api_key = st.screts('OPENAI_API_KEY')
+            api_key = st.secrets('OPENAI_API_KEY')
             # st.text_input(
             #     "OpenAI API key",
             #     type="password",
@@ -127,7 +127,7 @@ def ui_api_key():
     else:
         # st.write("## 1. Enter your OpenAI API key")
         st.success("API key loaded successfully.")
-        api_key = st.screts('OPENAI_API_KEY')
+        api_key = st.secrets('OPENAI_API_KEY')
         # st.text_input(
         #     "OpenAI API key",
         #     type="password",
