@@ -100,7 +100,8 @@ def ui_info():
 
 def ui_api_key():
     if ss["community_user"]:
-        st.write("## 1. Optional - enter your OpenAI API key")
+        # st.write("## 1. Optional - enter your OpenAI API key")
+        st.success("API key loaded successfully.")
         t1, t2 = st.tabs(["community version", "enter your own API key"])
         with t1:
             pct = model.community_tokens_available_pct()
@@ -115,22 +116,25 @@ def ui_api_key():
             ss["community_pct"] = pct
             ss["debug"]["community_pct"] = pct
         with t2:
-            st.text_input(
-                "OpenAI API key",
-                type="password",
-                key="api_key",
-                on_change=on_api_key_change,
-                label_visibility="collapsed",
-            )
+            api_key = st.screts('OPENAI_API_KEY')
+            # st.text_input(
+            #     "OpenAI API key",
+            #     type="password",
+            #     key="api_key",
+            #     on_change=on_api_key_change,
+            #     label_visibility="collapsed",
+            # )
     else:
-        st.write("## 1. Enter your OpenAI API key")
-        st.text_input(
-            "OpenAI API key",
-            type="password",
-            key="api_key",
-            on_change=on_api_key_change,
-            label_visibility="collapsed",
-        )
+        # st.write("## 1. Enter your OpenAI API key")
+        st.success("API key loaded successfully.")
+        api_key = st.screts('OPENAI_API_KEY')
+        # st.text_input(
+        #     "OpenAI API key",
+        #     type="password",
+        #     key="api_key",
+        #     on_change=on_api_key_change,
+        #     label_visibility="collapsed",
+        # )
 
 
 def index_pdf_file():
