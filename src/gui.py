@@ -77,9 +77,11 @@ def ui_info():
     )
     ui_spacer(1)
     st.write(
-        """
-        ✅ Recreated by [Yiqiao Yin](https://www.linkedin.com/in/yiqiaoyin/) | Credit to [Maciej Obarski](https://www.linkedin.com/in/mobarski/)
-        """,
+        "Credit to [Maciej Obarski](https://www.linkedin.com/in/mobarski/)",
+        unsafe_allow_html=True,
+    )
+    st.write(
+        "Recreated by [Yiqiao Yin](https://www.linkedin.com/in/yiqiaoyin/)",
         unsafe_allow_html=True,
     )
     ui_spacer(1)
@@ -98,8 +100,7 @@ def ui_info():
 
 def ui_api_key():
     if ss["community_user"]:
-        # st.write("## 1. Optional - enter your OpenAI API key")
-        st.success("API key loaded successfully.")
+        st.write("## 1. Optional - enter your OpenAI API key")
         t1, t2 = st.tabs(["community version", "enter your own API key"])
         with t1:
             pct = model.community_tokens_available_pct()
@@ -114,25 +115,22 @@ def ui_api_key():
             ss["community_pct"] = pct
             ss["debug"]["community_pct"] = pct
         with t2:
-            api_key = st.secrets['OPENAI_API_KEY']
-            # st.text_input(
-            #     "OpenAI API key",
-            #     type="password",
-            #     key="api_key",
-            #     on_change=on_api_key_change,
-            #     label_visibility="collapsed",
-            # )
+            st.text_input(
+                "OpenAI API key",
+                type="password",
+                key="api_key",
+                on_change=on_api_key_change,
+                label_visibility="collapsed",
+            )
     else:
-        # st.write("## 1. Enter your OpenAI API key")
-        st.success("API key loaded successfully.")
-        api_key = st.secrets['OPENAI_API_KEY']
-        # st.text_input(
-        #     "OpenAI API key",
-        #     type="password",
-        #     key="api_key",
-        #     on_change=on_api_key_change,
-        #     label_visibility="collapsed",
-        # )
+        st.write("## 1. Enter your OpenAI API key")
+        st.text_input(
+            "OpenAI API key",
+            type="password",
+            key="api_key",
+            on_change=on_api_key_change,
+            label_visibility="collapsed",
+        )
 
 
 def index_pdf_file():
@@ -167,11 +165,10 @@ def debug_index():
 
 
 def ui_pdf_file():
-    st.write("## Upload or select your PDF file")
-    # disabled = not ss.get("user") or (
-    #     not ss.get("api_key") and not ss.get("community_pct", 0)
-    # )
-    disabled = False
+    st.write("## 2. Upload or select your PDF file")
+    disabled = not ss.get("user") or (
+        not ss.get("api_key") and not ss.get("community_pct", 0)
+    )
     t1, t2 = st.tabs(["UPLOAD", "SELECT"])
     with t1:
         st.file_uploader(
@@ -277,7 +274,7 @@ def ui_hyde_prompt():
 
 def ui_question():
     st.write(
-        "## Ask questions" + (f' to {ss["filename"]}' if ss.get("filename") else "")
+        "## 3. Ask questions" + (f' to {ss["filename"]}' if ss.get("filename") else "")
     )
     disabled = False
     st.text_area(
