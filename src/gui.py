@@ -171,13 +171,14 @@ def ui_pdf_file():
     # disabled = not ss.get("user") or (
     #     not ss.get("api_key") and not ss.get("community_pct", 0)
     # )
+    disabled = False
     t1, t2 = st.tabs(["UPLOAD", "SELECT"])
     with t1:
         st.file_uploader(
             "pdf file",
             type="pdf",
             key="pdf_file",
-            disabled=False,
+            disabled=disabled,
             on_change=index_pdf_file,
             label_visibility="collapsed",
         )
